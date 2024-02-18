@@ -1,0 +1,33 @@
+:root {
+  --primary-background: #141625;
+  --drawer-background: #141625;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+  --filter-menu-bg: #252945;
+  --common-bg: #1e2139;
+  --text-color: #ffffff;
+  --total-color: #ffffff;
+  --invoice-details-color: #ffffff;
+  --items-table-bg: #252945;
+  --items-total-bg: #0c0e16;
+  --input-bg: #1e2139;
+  --add-item-bg: #1e2139;
+}
+
+[data-mode="light"] {
+  --primary-background: #f8f8fb;
+  --drawer-background: #ffffff;
+  --primary-text-color: #000000;
+  --secondary-text-color: #888eb0;
+  --shadow-color: rgba(72, 84, 159, 0.25);
+  --filter-menu-bg: #ffffff;
+  --common-bg: #ffffff;
+  --text-color: #7e88c3;
+  --total-color: #1e2139;
+  --invoice-details-color: #0c0e16;
+  --items-table-bg: #f9fafe;
+  --items-total-bg: #373b53;
+  --input-bg: #ffffff;
+  --add-item-bg: #f9fafe;
+}
