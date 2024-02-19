@@ -1,13 +1,14 @@
 export const useFetchWithCache = async <T = any>(
   requestData: ApiFunctionData
 ) => {
+  const config = useRuntimeConfig();
   const nuxtApp = useNuxtApp();
   const request = await useFetch<CachedRequest<T>>(requestData.url, {
     headers: {
       Accept: "application/json",
       "Access-Control-Allow-Origin": "*",
     },
-    baseURL: "http://localhost:3001/",
+    baseURL: config.public.appBaseUrl as string,
     key: requestData.key,
     transform: (data): CachedRequest<T> => {
       return {
