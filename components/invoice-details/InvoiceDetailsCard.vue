@@ -78,7 +78,7 @@
     >
       <p class="hidden md:block">Amount Due</p>
       <p class="md:hidden">Grand Total</p>
-      <p class="text-[1.25rem] font-bold">${{ itemsTotalPrice }}</p>
+      <p class="text-[1.25rem] font-bold">${{ invoice.total.toFixed(2) }}</p>
     </div>
   </div>
 </template>
@@ -87,15 +87,8 @@
 import formatDate from "~/helpers/formatDate";
 import type { Invoice } from "~/types/invoice";
 
-const props = defineProps<{ invoice: Invoice }>();
+defineProps<{ invoice: Invoice }>();
 
-const itemsTotalPrice = computed(() => {
-  let total = 0;
-  props.invoice?.items.forEach((item) => {
-    total += item.total;
-  });
-  return total;
-});
 </script>
 
 <style scoped lang="scss">
