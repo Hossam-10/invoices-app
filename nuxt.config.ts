@@ -15,4 +15,9 @@ export default defineNuxtConfig({
       ErrorMessage: "ErrorMessage",
     },
   },
+  runtimeConfig: {
+    public: {
+      appBaseUrl: "",
+    },
+  },
 });
